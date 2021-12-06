@@ -1,11 +1,11 @@
-#Stack Module
+# Stack Module
 
 def getStack():
     """Creates a new stack."""
     return []
 
 def isEmpty(s):
-    """REturns True if stack is empty, otherwise returns False."""
+    """Returns True if stack is empty, otherwise returns False."""
     if s == []:
         return True
     else:
