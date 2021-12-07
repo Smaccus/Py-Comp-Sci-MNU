@@ -90,33 +90,17 @@ for shapes in shapeList:
 # For loop that runs through 10 times
 
 for i in range(10):
-    # Pushes all of the turtles in stack 1 into stack2 and shows each turtle as it is copied to stack2.
-    for i in stack1:
-        stacks.push(stack2, i)
-        i.showturtle()
-        time.sleep(.1)
-        
-    # Pops all of the turtles in stack1 and hides them as it is popped.
-
-    for i in stack2:
-        stacks.pop(stack1)
-        i.hideturtle()
+    while not stacks.isEmpty(stack1):
+        selectedTurtle = stacks.pop(stack1)
+        stacks.push(stack2, selectedTurtle)
+        selectedTurtle.showturtle()
         time.sleep(.1)
 
-    # Pushes all of the turtles in stack2 into stack2 and shows each turtle as it is copied to stack1.
-
-    for i in stack2:
-        stacks.push(stack1, i)
-        i.showturtle()
+    while not stacks.isEmpty(stack2):
+        selectedTurtle = stacks.pop(stack2)
+        stacks.push(stack1, selectedTurtle)
+        selectedTurtle.hideturtle()
         time.sleep(.1)
-
-    # Pops all of the turtles in stack2 and hides them as it is popped.
-    
-    for i in stack1:
-        stacks.pop(stack2)
-        i.hideturtle()
-        time.sleep(.1)
-
 
 # Calls farewell function
 
