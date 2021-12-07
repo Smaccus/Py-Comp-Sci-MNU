@@ -31,7 +31,7 @@ def farewell():
 def greeting():
     print(' ', '\n')
     print(format('-','=^45'))
-    print(format('Hello! Welcome to a Class Exercise!',' ^45'))
+    print(format('Hello! Welcome to the Arrow Directionator!',' ^45'))
     print(format('-','=^45'))
     print(' ', '\n')
 
@@ -90,12 +90,13 @@ for shapes in shapeList:
 # For loop that runs through 10 times
 
 for i in range(10):
+    # While loop that runs until stack1 is empty, pops an item off stack1, pushes it to stack2, shows the popped turtle, then delays .1
     while not stacks.isEmpty(stack1):
         selectedTurtle = stacks.pop(stack1)
         stacks.push(stack2, selectedTurtle)
         selectedTurtle.showturtle()
         time.sleep(.1)
-
+    # While loop that runs until stack2 is empty, pops an item off stack2, pushes it to stack1, shows the popped turtle, then delays .1
     while not stacks.isEmpty(stack2):
         selectedTurtle = stacks.pop(stack2)
         stacks.push(stack1, selectedTurtle)
